@@ -21,6 +21,8 @@ var pathToViews = path.join(__dirname, "./views");
 
 app.use('/bootstrap', express.static(path.join(__dirname, "./node_modules/bootstrap/dist")));
 app.use('/jquery', express.static(path.join(__dirname, "./node_modules/jquery/dist")));
+app.use('/public', express.static( path.join(pathToPublic) ) );
+
 
 app.set('views',pathToViews );
 app.set('view engine','html');

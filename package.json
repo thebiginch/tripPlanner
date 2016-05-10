@@ -7,7 +7,7 @@
     "build-css": "node-sass -w -r assets/stylesheets -o public/stylesheets",
     "start": "npm run build-css & nodemon -e html,css,js app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },  
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -17,6 +17,7 @@
     "express": "^4.13.4",
     "jquery": "^2.2.3",
     "morgan": "^1.7.0",
+    "node-sass": "^3.7.0",
     "path": "^0.12.7",
     "pg": "^4.5.5",
     "pg-hstore": "^2.3.2",
