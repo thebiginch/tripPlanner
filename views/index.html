@@ -36,28 +36,57 @@
             <div class="places col-md-3">
                 <div class="panel panel-default">
                     <div class="panel-body" >
-                    <h3>Hotels:</h3>
+                    <h4>Hotels:</h4>
                         <select>
                             {%for hotel in hotels %}
                             <option value="{{hotel.name}}">{{hotel.name}}</option>
                             {% endfor %}
                         </select>
-                        <h3>Restaurants:</h3>
+                        <button type="button" class="btn btn-success btn-sm">+</button>
+                        <h4>Restaurants:</h4>
                         <select>
                             {%for rest in rests %}
                             <option value="{{rest.name}}">{{rest.name}}</option>
                             {% endfor %}
                         </select>
-                        <h3>Activity:</h3>
+                        <button type="button" class="btn btn-success btn-sm">+</button>
+                        <h4>Activity:</h4>
                         <select>
                             {%for act in acts %}
                             <option value="{{act.name}}">{{act.name}}</option>
                             {% endfor %}
                         </select>
+                        <button type="button" class="btn btn-success btn-sm">+</button>
+                        </div>
+                </div>
+                 <div class="panel panel-default">
+                    <div class="panel-body" >
+                        <h4>My Hotel</h4>
+                        <ul>
+                            <li>{{hotel.name}}</li>
+                        </ul>
+                        <h4>My Restaurants:</h4>
+                        <ul>
+                            <li>{{rest.name}}</li>
+                        </ul>
+                        <h4>My Activities:</h4>
+                        <ul>
+                            <li>{{act.name}}</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class = "row">
+            <div class="empty col-md-9">
+            </div>
+            <div class="my-places col-md-3">
+               
+            </div>
+        </div>
+
+
     </body>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkjK-GIIteUmBjM7UtqRDO741YUAh1CIQ&sensor=true"></script>
     <script>

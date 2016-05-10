@@ -8,14 +8,36 @@ h1 {
   color: orange; }
 
 h4 {
-  color: green; }
+  color: #6D6C6E; }
 
 h5 {
   color: green; }
 
 .places {
-  margin-top: 100px;
-  background-color: #CBC8CB; }
+  font: helvetica;
+  margin-top: 50px;
+  background-color: #CBC8CB;
+  height: 700px; }
 
 #map-canvas {
-  height: 500px; }
+  margin-top: 50px;
+  height: 700px; }
+
+.panel {
+  background-color: #D1E3FF;
+  margin-top: 20px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+  border-width: 0px; }
+
+.panel-body {
+  background-color: #D1E3FF; }
+
+select {
+  max-width: 95%;
+  width: 250px; }
+
+.panel-body > button {
+  border-radius: 50%;
+  text-align: center;
+  border-width: 0px; }
