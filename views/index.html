@@ -7,26 +7,21 @@
     <html lang="en">
 
     <body>
+        <h3>Hotel:</h3>
         <select>
-        	<h3>Hotel:</h3>
             {%for hotel in hotels %}
-
             <option value="{{hotel.name}}">{{hotel.name}}</option>
             {% endfor %}
         </select>
-
+        <h3>Restaurants:</h3>
         <select>
-        	<h3>Restaurants:</h3>
             {%for rest in rests %}
-
             <option value="{{rest.name}}">{{rest.name}}</option>
             {% endfor %}
         </select>
-
+        <h3>Activity:</h3>
         <select>
-        	<h3>Activity:</h3>
             {%for act in acts %}
-
             <option value="{{act.name}}">{{act.name}}</option>
             {% endfor %}
         </select>
