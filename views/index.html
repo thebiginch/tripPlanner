@@ -1,0 +1,35 @@
+<DOCTYPE html>
+
+    <head>
+        <title>Trip Planner </title>
+        <!--<link href="/stylesheet.css" rel="stylesheet">-->
+    </head>
+    <html lang="en">
+
+    <body>
+        <select>
+        	<h3>Hotel:</h3>
+            {%for hotel in hotels %}
+
+            <option value="{{hotel.name}}">{{hotel.name}}</option>
+            {% endfor %}
+        </select>
+
+        <select>
+        	<h3>Restaurants:</h3>
+            {%for rest in rests %}
+
+            <option value="{{rest.name}}">{{rest.name}}</option>
+            {% endfor %}
+        </select>
+
+        <select>
+        	<h3>Activity:</h3>
+            {%for act in acts %}
+
+            <option value="{{act.name}}">{{act.name}}</option>
+            {% endfor %}
+        </select>
+    </body>
+
+    </html>

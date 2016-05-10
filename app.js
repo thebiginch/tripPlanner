@@ -3,18 +3,27 @@ var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var path = require('path');
 var swig = require('swig');
-
 var router = require('./routes/routes');
 var app = express();
+
+var models = require('./models/models.js');
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(express.static('public'));
+
+
+var pathToPublic = path.join(__dirname, "./public");
+var pathToViews = path.join(__dirname, "./views");
+
+//console.log('=---------------------------',pathToPublic,pathToViews)
+
+
+app.use(express.static(pathToPublic));
 
 
 
-app.set('view',__dirname+"/views");
+app.set('views',pathToViews );
 app.set('view engine','html');
 app.engine('html',swig.renderFile);
 swig.setDefaults({cache: false});
@@ -37,13 +46,15 @@ app.use(function(req, res, next) {
 app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   console.error(err);
-  res.render(
-    // ... fill in this part
-  );
+ 
 });
 
 
+// models.Hotel.sync().then(function(){
 
 app.listen(3001,function(){
 	console.log('Listening on port 3001');
 });
+
+// })
+// .catch(console.error);
